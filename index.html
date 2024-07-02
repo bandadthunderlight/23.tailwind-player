@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+
+<section class="musicPlayer-section bg-cover bg-center w-100 h-screen flex flex-col justify-center"
+    style="background-image: url(./images/bg.jpg)">
+    <div class="musicPlayer-container bg-slate-800/70 w-80 rounded-2xl mx-auto p-5 ">
+        <div class="musicPlayer-imageHolder">
+            <img class="musicPlayer-img rounded-2xl" src="./images/cover-1.png" />
+        </div>
+        <div class="musicPlayer-titleHoder text-center mt-3 mb-10">
+            <p class="musicPlayer-title text-slate-100">forest lullaby</p>
+            <p class="musicPlayer-subtitle text-slate-500 m-0 p-0 text-xs">cosmo sheldrake</p>
+        </div>
+        <div class="musicPlayer-barHolder my-5 bg-slate-100 h-1 rounded-lg">
+            <audio id="musicPlayer-audioElement">
+                <source src="./musics/forest-lullaby-110624.mp3" type="audio/mp3">
+            </audio>
+            <div class="musicPlayer-progress bg-pink-500 w-0 h-1 rounded-lg"></div>
+        </div>
+        <div class="musicPlayer-controlBtnsHolder flex flex-row justify-center">
+
+            <button class="musicPlayer-prevBtn" onclick="playPrevTrack()">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M17.8136 14.2517L23.6953 10.9841C25.0284 10.2435 26.6666 11.2074 26.6666 12.7324V19.2676C26.6666 20.7926 25.0284 21.7566 23.6953 21.016L17.8136 17.7483C16.442 16.9863 16.442 15.0137 17.8136 14.2517Z"
+                        fill="#4D5562" />
+                    <path d="M10.6666 22.6667L10.6666 9.33335" stroke="#4D5562" stroke-width="2"
+                        stroke-linecap="round" />
+                    <path d="M5.33325 22.6667L5.33325 9.33335" stroke="#4D5562" stroke-width="2"
+                        stroke-linecap="round" />
+                </svg>
+            </button>
+
+            <button class="musicPlayer-playBtn bg-pink-500 rounded-full shadow-sm shadow-pink-600 p-2 mx-5" onclick="playTheTrack()">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M21.941 14.244L14.119 10.236C12.686 9.50176 11 10.5696 11 12.2115V19.7885C11 21.4304 12.686 22.4982 14.119 21.764L21.941 17.756C23.353 17.0325 23.353 14.9675 21.941 14.244Z"
+                        fill="#E5E7EB" />
+                </svg>
+            </button>
+
+            <button class="musicPlayer-nextBtn" onclick="playNextTrack()">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M14.1864 14.2517L8.30466 10.9841C6.9716 10.2435 5.33337 11.2074 5.33337 12.7324V19.2676C5.33337 20.7926 6.9716 21.7566 8.30466 21.016L14.1864 17.7483C15.558 16.9863 15.558 15.0137 14.1864 14.2517Z"
+                        fill="#4D5562" />
+                    <path d="M21.3334 22.6667L21.3334 9.33335" stroke="#4D5562" stroke-width="2"
+                        stroke-linecap="round" />
+                    <path d="M26.6667 22.6667L26.6667 9.33335" stroke="#4D5562" stroke-width="2"
+                        stroke-linecap="round" />
+                </svg>
+            </button>
+
+        </div>
+    </div>
+</section>
+
+<script src="./app.js"></script>
+
+<body>
+
+</body>
+
+</html>
